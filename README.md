@@ -16,18 +16,21 @@ node installation
 npm install
 ```
 
-## env
-```
-cp env.sample .env
-```
+## Set up env
+Create an .env.sample with this value
 ```
 BASE_URL = https://petstore.swagger.io/v2
+```
+
+Then run this line on terminal
+```
+cp .env.sample .env
 ```
     
 ## How To Run
 ```
-npm run test-api        #Running test case
-npm run reports         #generate reports
+npm run test-api        #Run test cases
+npm run reports         #Generate reports
 ```
 
 ## Structure
@@ -52,8 +55,4 @@ report can be two type :
 - mochawesome.json : if we want consume that report and integrate it with dashboard like grafana etc,
 
 ## Notes
-- this project use mac set up, this runner script will will work on Windows if you are using a terminal that supports Unix-style paths, such as Git Bash, PowerShell, or Windows Subsystem for Linux (WSL).
-
-## Answer the Question
-1. To answer question 1 & 2, I use payload array and we can move the payload to add_pet_data.js if needed.
-2. To Answer question 3 & 4, I use payload array and we can move the payload to separated data file if needed.
+- This project use mac set up, this runner script will will work on Windows if you are using a terminal that supports Unix-style paths, such as Git Bash, PowerShell, or Windows Subsystem for Linux (WSL).
