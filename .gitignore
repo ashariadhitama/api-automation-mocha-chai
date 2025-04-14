@@ -4,3 +4,4 @@ reports
 package-lock.json
 api/.DS_Store
 .DS_Store
+/reports/mochawesome

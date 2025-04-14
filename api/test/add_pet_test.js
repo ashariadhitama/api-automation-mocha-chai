@@ -23,7 +23,7 @@ describe(`@post ${testCase.describe}`, () => {
         it(`@positive ${testCase.positive.validParams} with pet name: ${petName}`, async () => {
             const response = await page.addPet(data.addPet(petName, petCategory, petTags));
 
-            console.log(response.body.category.name);
+            //console.log(response.body.category.name);
             assert(response.status).to.equal(200);
             assert(response.body.name).to.equal(petName);
             assert(response.body.category.name).to.equal(petCategory);
@@ -37,7 +37,7 @@ describe(`@post ${testCase.describe}`, () => {
     it(`@negative I'm unable to add pet data with space only as its name`, async () => {
         const response = await page.addPet(data.addPet('', 'hello', 'yeah'));
 
-        console.log(response.body);
+        //console.log(response.body);
         assert(response.status).to.equal(200);
         assert(response.body.name).to.equal('');
         assert(response.body.category.name).to.equal('hello');
