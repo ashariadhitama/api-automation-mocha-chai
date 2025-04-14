@@ -1,0 +1,284 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 7,
+    "passes": 5,
+    "pending": 0,
+    "failures": 2,
+    "start": "2025-04-13T08:26:18.033Z",
+    "end": "2025-04-13T08:26:27.420Z",
+    "duration": 9387,
+    "testsRegistered": 7,
+    "passPercent": 71.42857142857143,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c4048333-df65-43bf-bc35-1f3e507d8eaa",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dde230eb-2326-4229-8fa3-0c1884ace45e",
+          "title": "@post add pet data",
+          "fullFile": "/Users/muhammadashariadhitama/Documents/Repositories/candidate/apiAutomationAmartha/api/test/add_pet_test.js",
+          "file": "/api/test/add_pet_test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "@positive As a User, I want to add pet data with pet name: Cat1",
+              "fullTitle": "@post add pet data @positive As a User, I want to add pet data with pet name: Cat1",
+              "timedOut": false,
+              "duration": 1303,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.addPet(data.addPet(petName, petCategory, petTags));\nconsole.log(response.body.category.name);\nassert(response.status).to.equal(200);\nassert(response.body.name).to.equal(petName);\nassert(response.body.category.name).to.equal(petCategory);\nassert(response.body.tags[0].name).to.equal(petTags);\n\t\t\tassert(response.body).to.be.jsonSchema(schema);",
+              "err": {},
+              "uuid": "48c9bca6-0d9e-4757-aa7a-b5d60d2bf18b",
+              "parentUUID": "dde230eb-2326-4229-8fa3-0c1884ace45e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "@positive As a User, I want to add pet data with pet name: Cat2",
+              "fullTitle": "@post add pet data @positive As a User, I want to add pet data with pet name: Cat2",
+              "timedOut": false,
+              "duration": 1216,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.addPet(data.addPet(petName, petCategory, petTags));\nconsole.log(response.body.category.name);\nassert(response.status).to.equal(200);\nassert(response.body.name).to.equal(petName);\nassert(response.body.category.name).to.equal(petCategory);\nassert(response.body.tags[0].name).to.equal(petTags);\n\t\t\tassert(response.body).to.be.jsonSchema(schema);",
+              "err": {},
+              "uuid": "7468f678-1917-400e-818a-69efdfefdcc6",
+              "parentUUID": "dde230eb-2326-4229-8fa3-0c1884ace45e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "@positive As a User, I want to add pet data with pet name: ",
+              "fullTitle": "@post add pet data @positive As a User, I want to add pet data with pet name: ",
+              "timedOut": false,
+              "duration": 1227,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.addPet(data.addPet(petName, petCategory, petTags));\nconsole.log(response.body.category.name);\nassert(response.status).to.equal(200);\nassert(response.body.name).to.equal(petName);\nassert(response.body.category.name).to.equal(petCategory);\nassert(response.body.tags[0].name).to.equal(petTags);\n\t\t\tassert(response.body).to.be.jsonSchema(schema);",
+              "err": {},
+              "uuid": "bfccdd36-41b7-48b5-8de1-5248e884317b",
+              "parentUUID": "dde230eb-2326-4229-8fa3-0c1884ace45e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "48c9bca6-0d9e-4757-aa7a-b5d60d2bf18b",
+            "7468f678-1917-400e-818a-69efdfefdcc6",
+            "bfccdd36-41b7-48b5-8de1-5248e884317b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3746,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 180000
+        },
+        {
+          "uuid": "62ac89c1-6843-47c2-9c11-65f876a0a383",
+          "title": "@post add pet data",
+          "fullFile": "/Users/muhammadashariadhitama/Documents/Repositories/candidate/apiAutomationAmartha/api/test/add_pet_test.js",
+          "file": "/api/test/add_pet_test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "@negative I'm unable to add pet data with space only as its name",
+              "fullTitle": "@post add pet data @negative I'm unable to add pet data with space only as its name",
+              "timedOut": false,
+              "duration": 1283,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.addPet(data.addPet('', 'hello', 'yeah'));\nconsole.log(response.body);\nassert(response.status).to.equal(200);\nassert(response.body.name).to.equal('');\nassert(response.body.category.name).to.equal('hello');\nassert(response.body.tags.name).to.equal('yeah');\nassert(response.body).to.be.jsonSchema(schema);",
+              "err": {
+                "message": "AssertionError: expected undefined to equal 'yeah'",
+                "estack": "AssertionError: expected undefined to equal 'yeah'\n    at Context.<anonymous> (api/test/add_pet_test.js:44:44)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": null
+              },
+              "uuid": "176000cf-380c-4d21-b185-422a3521dd5d",
+              "parentUUID": "62ac89c1-6843-47c2-9c11-65f876a0a383",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "176000cf-380c-4d21-b185-422a3521dd5d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1283,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 180000
+        },
+        {
+          "uuid": "fc5e22d5-6142-4206-8db2-9297ca703b78",
+          "title": "@getFindPetByStatus find pet By Status",
+          "fullFile": "/Users/muhammadashariadhitama/Documents/Repositories/candidate/apiAutomationAmartha/api/test/get_find_pet_by_status.js",
+          "file": "/api/test/get_find_pet_by_status.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "@get As a User, I want to find pet by status with status: available",
+              "fullTitle": "@getFindPetByStatus find pet By Status @get As a User, I want to find pet by status with status: available",
+              "timedOut": false,
+              "duration": 1679,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.getFindPetByStatus({ status });\nassert(response.status).to.equal(code.successOk);\nassert(response.body).to.be.jsonSchema(schema); \nresponse.body.forEach((pet) => {\n    assert(pet.status).to.equal(status, `Pet ID ${pet.id} has incorrect status`);\n});",
+              "err": {},
+              "uuid": "697c31b1-2ccf-46fa-9d69-f61d2540870b",
+              "parentUUID": "fc5e22d5-6142-4206-8db2-9297ca703b78",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "@get As a User, I want to find pet by status with status: pending",
+              "fullTitle": "@getFindPetByStatus find pet By Status @get As a User, I want to find pet by status with status: pending",
+              "timedOut": false,
+              "duration": 1421,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.getFindPetByStatus({ status });\nassert(response.status).to.equal(code.successOk);\nassert(response.body).to.be.jsonSchema(schema); \nresponse.body.forEach((pet) => {\n    assert(pet.status).to.equal(status, `Pet ID ${pet.id} has incorrect status`);\n});",
+              "err": {},
+              "uuid": "d47e04c4-3ea1-4d5a-882f-197a9950e0ed",
+              "parentUUID": "fc5e22d5-6142-4206-8db2-9297ca703b78",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "697c31b1-2ccf-46fa-9d69-f61d2540870b",
+            "d47e04c4-3ea1-4d5a-882f-197a9950e0ed"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3100,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 180000
+        },
+        {
+          "uuid": "2b41c220-2c5a-453e-a6ab-c5f0ec816989",
+          "title": "@getFindPetById find pet By ID",
+          "fullFile": "/Users/muhammadashariadhitama/Documents/Repositories/candidate/apiAutomationAmartha/api/test/get_pet_by_id.js",
+          "file": "/api/test/get_pet_by_id.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "As a User, I want to find pet by ID with spesific pet ID 1",
+              "fullTitle": "@getFindPetById find pet By ID As a User, I want to find pet by ID with spesific pet ID 1",
+              "timedOut": false,
+              "duration": 1237,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await page.getPetById(petId);\nassert(response.status).to.equal(code.successOk); \nassert(response.body).to.be.jsonSchema(schema); \nassert(response.body.id).to.equal(petId, 'Pet ID does not match the requested ID');",
+              "err": {
+                "message": "AssertionError: expected 404 to equal 200",
+                "estack": "AssertionError: expected 404 to equal 200\n    at Context.<anonymous> (api/test/get_pet_by_id.js:21:36)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)",
+                "diff": "- 404\n+ 200\n"
+              },
+              "uuid": "40f74cde-1978-4125-8313-3b56b875193d",
+              "parentUUID": "2b41c220-2c5a-453e-a6ab-c5f0ec816989",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "40f74cde-1978-4125-8313-3b56b875193d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1237,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 180000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 180000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.8.2"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "reports/mochawesome/"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
